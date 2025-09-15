@@ -1,49 +1,24 @@
-# calculator.py
+Calculator CLI Application 
 
-def add(x, y):
-    return x + y
+```markdown
+# Calculator CLI Application
 
-def subtract(x, y):
-    return x - y
+A simple console-based calculator written in Python. Users can perform **basic arithmetic operations** like addition, subtraction, multiplication, and division.
 
-def multiply(x, y):
-    return x * y
+## Features
+- Addition, Subtraction, Multiplication, Division
+- Interactive console interface
+- Handles invalid inputs gracefully
 
-def divide(x, y):
-    if y == 0:
-        return "Error! Division by zero."
-    return x / y
+## Requirements
+- Python 3.x
 
-def calculator():
-    print("===== Simple CLI Calculator =====")
-    print("Operations: +, -, *, /")
-    print("Type 'exit' to quit.\n")
+No additional libraries required.
 
-    while True:
-        choice = input("Enter operation (+, -, *, / or exit): ").strip()
+## How to Run
+1. Clone or download this repository.
+2. Open terminal/command prompt in the project folder.
+3. Run the script:
 
-        if choice.lower() == "exit":
-            print("Exiting Calculator... Goodbye!")
-            break
-
-        if choice in ["+", "-", "*", "/"]:
-            try:
-                num1 = float(input("Enter first number: "))
-                num2 = float(input("Enter second number: "))
-
-                if choice == "+":
-                    print("Result:", add(num1, num2))
-                elif choice == "-":
-                    print("Result:", subtract(num1, num2))
-                elif choice == "*":
-                    print("Result:", multiply(num1, num2))
-                elif choice == "/":
-                    print("Result:", divide(num1, num2))
-
-            except ValueError:
-                print("Invalid input! Please enter numbers only.")
-        else:
-            print("Invalid operation! Try again.\n")
-
-if __name__ == "__main__":
-    calculator()
+```bash
+python calculator.py
